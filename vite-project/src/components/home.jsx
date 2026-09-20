@@ -26,18 +26,27 @@ const Home = () => {
             Hi, I'm <span className="text-[#3b3a30]">Sacchi</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-4 md:mb-6 font-medium">
-            A passionate Web Developer & CSE AIML student at Narula Institute of Technology.
+            A passionate Web Developer & final year CSE AIML student.
           </p>
           <p className="text-sm sm:text-md text-[#4f4e4c] mb-6 md:mb-8 font-medium">
             I focus on building elegant and responsive interfaces. Currently exploring Backend
             Development and Machine Learning to become a full-stack engineer.
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-[#567568] text-[#fdf6ec] px-6 md:px-8 py-2.5 md:py-3 rounded-xl font-bold shadow-lg hover:bg-[#4a6559] transition-colors hover:shadow-xl hover:-translate-y-1 transform duration-200"
-          >
-            Let's Connect
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="#contact"
+              className="inline-block bg-[#567568] text-[#fdf6ec] px-6 md:px-8 py-2.5 md:py-3 rounded-xl font-bold shadow-lg hover:bg-[#4a6559] transition-colors hover:shadow-xl hover:-translate-y-1 transform duration-200"
+            >
+              Let's Connect
+            </a>
+            <a
+              href="/Sacchi_Resume.pdf"
+              download="Sacchi_Resume.pdf"
+              className="inline-block border-2 border-[#567568] text-[#567568] bg-transparent px-6 md:px-8 py-2.5 md:py-3 rounded-xl font-bold shadow-lg hover:bg-[#567568] hover:text-[#fdf6ec] transition-colors hover:shadow-xl hover:-translate-y-1 transform duration-200"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
     </section>
