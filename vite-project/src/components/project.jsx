@@ -1,28 +1,59 @@
 import React, { useState } from "react";
 
 const projects = [
-  { id: 1, title: "Project", description: "In Progress – Stay Tuned!" },
-  { id: 2, title: "Project", description: "In Progress – Stay Tuned!" },
-  { id: 3, title: "Project", description: "In Progress – Stay Tuned!" },
+  { id: 1, title: "Mindmate", description: "Check out this project on GitHub!", link: "https://github.com/Sacchi0504/Mindmate", liveLink: "https://themindmates.in", image: "/projects/mindmate.png" },
+  { id: 2, title: "mindCareer", description: "Check out this project on GitHub!", link: "https://github.com/Sacchi0504/mindCareer", liveLink: "https://mindcareer.themindmates.in", image: "/projects/mindcareer.png" },
+  { id: 3, title: "Provium", description: "Check out this project on GitHub!", link: "https://github.com/Sacchi0504/Provium", liveLink: "https://provium.vercel.app/", image: "/projects/provium.png" },
+  { id: 4, title: "MarginMind", description: "Check out this project on GitHub!", link: "https://github.com/Sacchi0504/MarginMind", liveLink: "https://marginmind-jade.vercel.app/", image: "/projects/marginmind.png" },
 ];
 
-const ProjectCard = ({ title, description }) => {
+const ProjectCard = ({ title, description, link, liveLink, image }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleToggle = () => setIsFlipped((prev) => !prev);
-
   return (
-    <div className="w-full h-56 perspective" onClick={handleToggle}>
+    <div 
+      className="w-full h-56 perspective cursor-pointer" 
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
       <div
         className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
           isFlipped ? "rotate-y-180" : ""
         } rounded-2xl shadow-lg`}
       >
-        <div className="absolute w-full h-full bg-[#d5c6b5] rounded-2xl flex items-center justify-center text-xl font-semibold backface-hidden">
-          {title}
+        <div className="absolute w-full h-full bg-white rounded-2xl flex items-center justify-center text-xl font-semibold backface-hidden overflow-hidden p-2">
+          {image ? (
+            <img src={image} alt={title} className="w-full h-full object-contain" />
+          ) : (
+            <span>{title}</span>
+          )}
         </div>
-        <div className="absolute w-full h-full bg-[#e8d8c3] rounded-2xl flex items-center justify-center text-center p-4 font-light backface-hidden rotate-y-180">
-          {description}
+        <div className="absolute w-full h-full bg-[#e8d8c3] rounded-2xl flex flex-col items-center justify-center text-center p-4 font-light backface-hidden rotate-y-180">
+          <p className="mb-4">{description}</p>
+          <div className="flex gap-3">
+            {link && (
+              <a 
+                href={link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#567568] font-semibold text-sm hover:underline border border-[#567568] px-3 py-2 rounded-md transition-colors hover:bg-[#567568] hover:text-[#e8d8c3]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                GitHub
+              </a>
+            )}
+            {liveLink && (
+              <a 
+                href={liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-[#567568] text-[#e8d8c3] font-semibold text-sm hover:underline border border-[#567568] px-3 py-2 rounded-md transition-colors hover:bg-transparent hover:text-[#567568]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -39,8 +70,8 @@ const Project = () => {
         Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {projects.map(({ id, title, description }) => (
-          <ProjectCard key={id} title={title} description={description} />
+        {projects.map(({ id, title, description, link, liveLink, image }) => (
+          <ProjectCard key={id} title={title} description={description} link={link} liveLink={liveLink} image={image} />
         ))}
       </div>
     </section>
