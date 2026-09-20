@@ -15,7 +15,7 @@ const Home = () => {
           <div className="absolute -inset-1 rounded-full bg-[#fdf6ec]/40 blur-2xl z-0"></div>
           <img
             src={profileImage}
-            alt="Profile"
+            alt="Sacchi - Web Developer and AI/ML Engineer Profile Picture"
             className="relative z-10 w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-105"
           />
         </div>
