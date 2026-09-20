@@ -37,7 +37,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto bg-[#fdf6ec] p-6 md:p-12 rounded-2xl md:rounded-[2rem] shadow-xl border border-[#d5c6b5] text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 text-[#567568] tracking-tight">About Me</h2>
           <p className="text-base md:text-xl leading-relaxed text-gray-700 font-medium">
-            I'm <strong>Sacchi</strong>, a third-year B.Tech student specializing in Computer Science and Engineering with a focus on Artificial Intelligence and Machine Learning.
+            I'm <strong>Sacchi</strong>, a final year B.Tech student specializing in Computer Science and Engineering with a focus on Artificial Intelligence and Machine Learning.
             As a web developer and AI enthusiast, I enjoy building intuitive, user-friendly web experiences using both front-end and back-end technologies.
           </p>
         </div>
