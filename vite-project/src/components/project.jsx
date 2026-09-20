@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, link, liveLink, image }) => {
       >
         <div className="absolute w-full h-full bg-white rounded-2xl flex items-center justify-center text-xl font-semibold backface-hidden overflow-hidden p-2">
           {image ? (
-            <img src={image} alt={title} className="w-full h-full object-contain" />
+            <img src={image} alt={`${title} - Web Development Project by Sacchi`} className="w-full h-full object-contain" />
           ) : (
             <span>{title}</span>
           )}
