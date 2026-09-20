@@ -26,7 +26,7 @@ const Home = () => {
             Hi, I'm <span className="text-[#3b3a30]">Sacchi</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-4 md:mb-6 font-medium">
-            A passionate Web Developer & CSE AIML student at Narula Institute of Technology.
+            A passionate Web Developer & CSE AIML student.
           </p>
           <p className="text-sm sm:text-md text-[#4f4e4c] mb-6 md:mb-8 font-medium">
             I focus on building elegant and responsive interfaces. Currently exploring Backend
